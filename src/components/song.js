@@ -3,6 +3,7 @@ import React, { useEffect, useContext, useState } from 'react';
 import {VoiceContext} from "../contexts/VoiceContext";
 import getYoutubeTitle from 'get-youtube-title'
 import Restart from "./restart";
+import SongButton from "./songbutton";
 
 const songs = ['https://www.youtube.com/watch?v=k85mRPqvMbE', 'https://www.youtube.com/watch?v=mDFBTdToRmw', 'https://www.youtube.com/watch?v=ADlGkXAz1D0', 'https://www.youtube.com/watch?v=zMd_PxpF0Ug', 'https://www.youtube.com/watch?v=I40QBt6hhPw', 'https://www.youtube.com/watch?v=XQYNUwYHV1c']
 const song = songs[Math.floor(Math.random() * songs.length)]
@@ -36,6 +37,7 @@ export default function Song () {
                   Играет песня {songTitle}...
               </span>
             </section>
+            <SongButton link={song}/>
             <Restart/>
         </>
     )

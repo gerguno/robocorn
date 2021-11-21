@@ -1,19 +1,19 @@
 import React, { useContext } from 'react';
 import {AnswersContext} from "../contexts/AnswersContext";
 
-export default function Restart () {
+export default function Restart ({content = 'Начать заново'}) {
     const {answers, updateAnswers} = useContext(AnswersContext)
 
     const restart = () => {
         updateAnswers(prev => ({
             ...prev,
-            step: 0
+            step: 1
         }))
     }
 
     return (
         <>
-            <a href="#" className="restart" onClick={restart}>Начать заново</a>
+            <a href="#" className="restart" onClick={restart}>{content}</a>
         </>
     )
 }
