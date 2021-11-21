@@ -13,7 +13,7 @@ export default function Restart () {
 
     return (
         <>
-            <a className="restart" onClick={restart}>Начать заново</a>
+            <a href="#" className="restart" onClick={restart}>Начать заново</a>
         </>
     )
 }
